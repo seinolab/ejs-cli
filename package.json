@@ -15,6 +15,7 @@
   "license": "BSD",
   "dependencies": {
     "ejs": "^3.1.10",
+    "ejs-cli": "github:seinolab/ejs-cli",
     "glob": "^11.0.2",
     "js-yaml": "^4.1.0"
   }
