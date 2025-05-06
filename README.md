@@ -1,35 +1,61 @@
 ejs-cli
 =======
 
-ejs compile client.
+Command-line EJS compiler.
 
-## install
+New features:
+- rewrite in ES6
+- remove dependencies `async`, `chalk`, `mkdirp`, and `yargs`.
+- `--json` option to load variables from a JSON file or standard input.
+- `--yaml` option to load variables from a YAML file or standard input.
+- `--string` option to pass variables with a JSON string.
 
-### from npm
+## Installation
+
+### From npm
 
 ```
-npm -g install ejs-cli
+npm -g install git@github.com:seinolab/ejs-cli.git
 ```
 
-### from github
+### From github
 
 ```
 git clone git://github.com/fnobi/ejs-cli.git
 ```
 
-## usage
+## Usage
 
 ```
 Options:
-  -h, --help      show this help.                               [boolean]  [default: false]
-  -f, --file      give ejs template file path.                  [string]
-  -b, --base-dir  base directory that -f is relative to.        [string]  [default: "./"]
-  -e, --exclude   file/directory names to exclude               [string] [space separated if more than one]
-  -o, --out       file to write compiled.                       [string]
-  -O, --options   option variables (file path or JSON string).  [string]
+  -h, --help            Show help
+  -f, --file FILE       EJS template file path or glob (positional, used if -f is omitted)
+  -b, --base-dir DIR    Base directory (default: ./)
+  -e, --exclude EXCL    Space-separated exclude patterns
+  -o, --out DIR         Output directory (stdout if omitted)
+  -s, --string JSON     Pass variables as a JSON string
+  -j, --json FILE       Load variables from a JSON file or stdin (use '-' for stdin)
+  -y, --yaml FILE       Load variables from a YAML file or stdin (use '-' for stdin)
+  -O, --options OPTS    [Deprecated] Options as a JSON string or file path
 ```
 
 ### examples
+
+```bash
+ejs-cli template.ejs --json data.json > output.html
+```
+
+```bash
+ejs-cli template.ejs --string '{ "stamp": "2025-05-10" }' > output.html
+```
+
+```bash
+ejs-cli template.ejs --yaml data.yaml > output.html
+```
+
+```bash
+cat data.yaml | ejs-cli template.ejs --yaml - > output.html
+```
 
 ```bash
 ejs-cli "*.ejs" --out dest/ --options options.json
