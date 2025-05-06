@@ -1,1 +1,3 @@
-module.exports = require('./lib/ejs-cli');
+import run from './lib/cli.js';
+
+run();
