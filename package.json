@@ -1,7 +1,7 @@
 {
   "name": "ejs-cli",
   "description": "ejs compile client.",
-  "version": "2.2.3",
+  "version": "2.3.0",
   "type": "module",
   "main": "index.js",
   "repository": {
@@ -11,7 +11,7 @@
   "bin": {
     "ejs-cli": "bin/ejs-cli"
   },
-  "author": "Fujisawa Shin",
+  "author": "Takahiro Seino, Ph.D.",
   "license": "BSD",
   "dependencies": {
     "ejs": "^3.1.10",
