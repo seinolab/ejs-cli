@@ -5,7 +5,7 @@ Command-line EJS compiler.
 
 New features and enhancements:
 - rewrite in ES6
-- remove dependencies `async`, `chalk`, `mkdirp`, and `yargs`.
+- remove dependencies `async`, `chalk`, `mkdirp` and `yargs`.
 - `--json` option to load data from a JSON file or stdin.
 - `--yaml` option to load data from a YAML file or stdin.
 - `--env` option to use environment variables as data.
@@ -24,7 +24,7 @@ npm -g install git@github.com:seinolab/ejs-cli.git
 ### From github
 
 ```
-git clone git://github.com/fnobi/ejs-cli.git
+git clone git@github.com:seinolab/ejs-cli.git
 ```
 
 ## Usage
